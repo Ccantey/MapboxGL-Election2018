@@ -4,6 +4,7 @@ var activeTab = {
   name:"COUNTYNAME"
 };
 var zoomThreshold = 8;
+var hoveredStateId =  null;
 
 // var layersArray = ['2012results-cty','2012results-vtd','2012results-sen','2012results-hse','2012results-cng','2012results-cty-hover','2012results-vtd-hover','2012results-sen-hover','2012results-hse-hover','2012results-cng-hover']
 var layersArray = []; // at 0.22.0 you can no longer have undefined layers in array - must push them dynamically
@@ -78,14 +79,14 @@ function initialize(){
 	        ], 
 
    	        ['vtd', zoomThreshold, 20, ['==', 'UNIT', 'vtd'], activeTab.selection+'WIN', [['DFL', '#6582ac'],['R', '#cc7575'],['TIE', '#333']], activeTab.selection+'PCT', [[0, 0.25],[50, 0.45],[55, 0.6],[60, 0.7],[100, .99]], '#b8bbbf'],
-   	        ['vtd-hover', zoomThreshold, 20, ['all', ['==', 'UNIT', 'vtd'], ["==", "VTD", ""]], 'USPRSTOTAL', [[6000, 'orange']], activeTab.selection+'PCT', [[6000, .5]], 'white'],
+   	        ['vtd-hover', zoomThreshold, 20, ['all', ['==', 'UNIT', 'vtd'], ["==", "VTD", ""]], activeTab.selection+'WIN', [['DFL', 'orange'],['R', 'orange'],['TIE', 'orange'],['NOVOTE','orange']], activeTab.selection+'PCT', [[6000, .5]], 'white'],
 
             ['cty-hover', 
             3, 
             zoomThreshold, 
             ['all', ['==', 'UNIT', 'cty'], ["==", "COUNTYNAME", ""]], 
-            activeTab.selection+'WIN', 
-            [['DFL', 'orange'],['R', 'orange'],['TIE', 'orange'],['NOVOTE','orange']], 
+            activeTab.selection+'WIN', //breaking change at 0.33 used to be 'USPRSTOTAL',
+            [['DFL', 'orange'],['R', 'orange'],['TIE', 'orange'],['NOVOTE','orange']], //breaking change at 0.33 used to be [[6000, 'orange']]
             activeTab.selection+'TOTAL', 
             [[6000, .5]], 
             'white']
@@ -199,7 +200,7 @@ function addLayer(layer) {
 		            	"stops": layer[5],    //layers[5] = fill-color stops -- ['dfl':blue, 'r':red,'i':yellow]
 		            },
 		            "fill-opacity": {
-		            	"type":'interval',
+		            	// "type":'interval', //default is interval
 		            	property: layer[6],
 		            	stops: layer[7]
 		            },

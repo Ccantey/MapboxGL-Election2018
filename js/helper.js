@@ -31,11 +31,26 @@ $( document ).ready(function() {
     var features = map.queryRenderedFeatures(e.point, { layers: layersArray });
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
 
-    // var feature = (features.length) ? features[0] : '';
-    // removeLayers('pushpin');
-    // showResults(activeTab, feature.properties);
-    // mapResults(feature); 
   });
+  
+  map.on("mousemove", "2016results-cty", function(e) {
+    console.log(e.features.length)
+      if (e.features.length > 0) {
+            if (hoveredStateId) {
+                map.setFeatureState({source: 'electionResults', sourceLayer:'Election2016preliminaryResult-6l55xh', id: hoveredStateId}, { hover: false});
+            }
+            hoveredStateId = e.features[0].id;
+            map.setFeatureState({source: 'electionResults', sourceLayer:'Election2016preliminaryResult-6l55xh', id: hoveredStateId}, { hover: true});
+        }
+  });
+
+  map.on("mouseleave", "2016results-cty", function() {
+    if (hoveredStateId) {
+        map.setFeatureState({source: 'electionResults', sourceLayer:'Election2016preliminaryResult-6l55xh', id: hoveredStateId}, { hover: false});
+    }
+    hoveredStateId =  null;
+  });
+
 
   //show grab cursor
   map.on('dragstart', function (e) {
