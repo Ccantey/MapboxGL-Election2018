@@ -1,0 +1,411 @@
+/*Override bootstrap*/
+html, body {
+  height: 100%;
+  font-size:16px;
+  /*font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;*/
+
+}
+
+footer{
+	border-top: 1px solid #999;
+	color:#999;
+	font-size: 11px;
+	line-height:10px;
+	margin: 25px -15px;
+	padding-top: 5px;
+}
+
+.page-space{
+	width:100%;
+	height:400px;
+}
+
+.headline{
+	text-align: center;;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 720px;
+
+}
+.headline-title{
+	font-family: "georgia", serif;
+	font-size:43px;
+	font-weight: 300;
+}
+
+a {
+    color: #2B6DAD !important;
+    text-decoration: none;
+}
+
+a:hover {
+    /*color: #326891;*/
+    text-decoration: underline;
+}
+
+nav h5, .nav-link{
+	font-weight: bold;
+	color:#555 !important;
+	margin-bottom: 5px;
+}
+
+/*application CSS*/
+
+#clear{
+	position:relative;
+	float:right;
+	cursor: pointer;
+	font-size: 0.75rem;
+	color: #d64f4f;
+}
+
+#clear:hover{
+	color:#aaa;
+}
+.mapbox-improve-map {
+    display: none;
+}
+
+
+#legend, #legend{
+	position: absolute;
+	display: inline-flex;
+	right:50px;
+	top:20px;
+	border-radius: 3px;
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+}
+.legend {
+    background-color: #fff;
+    /*border-radius: 3px;*/
+    /*bottom: 30px;*/
+    /*box-shadow: 0 1px 2px rgba(0,0,0,0.10);*/
+    font: 12px/20px ;
+    padding: 5px;
+    /*position: absolute;*/
+    /*right: 10px;*/
+    /*z-index: 1;*/
+}
+
+/*.legend > div {
+    display: inline !important;
+}*/
+.legend-text{
+	font-size: 0.7rem;
+}
+.legend-text.pull-right{
+	font-size: 0.8rem;
+	margin-right:-5px;
+	margin-top:3px;
+	-ms-transform: rotate(-38deg); /* IE 9 */
+    -webkit-transform: rotate(-38deg); /* Chrome, Safari, Opera */
+    transform: rotate(-38deg);
+}
+
+.legend-text.pull-left{
+	margin-left:17px;
+	margin-top:-5px;
+	font-size: 0.8rem;
+	-ms-transform: rotate(-38deg); /* IE 9 */
+    -webkit-transform: rotate(-38deg); /* Chrome, Safari, Opera */
+    transform: rotate(-38deg);
+}
+
+.legend h6 {
+    margin: 0;
+    text-align: center
+}
+
+.legend div span {
+    /*border-radius: 50%;*/
+    display: block;
+    height: 16px;
+    margin-right: 0;
+    width: 25px;
+}
+/*.legend > h6 {
+    text-align: center;
+}*/
+
+.legend-party{
+	font-size: 0.8rem;
+	text-align: center;
+}
+.election-districts{
+	/*position:fixed;*/
+
+	/*width: 100%;*/
+	/*background-color: #fff;*/
+	/*margin-top:35px;*/
+	/*padding:15px 0 0;*/
+	/*text-align: center;*/
+	/*z-index: 1001;*/
+	/*margin-bottom: 40px;*/
+}
+
+ul.election-navigation li{
+	display:inline-block;
+	font:400 14px/16px Helvetica, Arial, sans-serif;
+	padding:0;	
+}
+
+.election-navigation li::before {
+    background: #ccc none repeat scroll 0 0;
+    content: " ";
+    display: inline-block;
+    height: 11px;
+    margin: 0 5px;
+    position: relative;
+    top: 1px;
+    width: 1px;
+}
+
+.election-navigation li:first-child::before {
+    display: none;
+}
+
+.election-navigation li a {
+    color: #999;
+}
+
+.election-navigation-a.active {
+    text-decoration: underline !important;
+    color: #d64f4f !important;
+}
+
+.election-navigation-a:hover{
+	cursor: pointer;
+}
+
+#ballot-box {
+    height: 30px;
+    /*margin-left:-79px;*/
+    margin-top: -5px;
+
+}
+
+.navbar-center{
+	/*margin-left: -5%;*/
+	margin:auto;
+}
+.navbar-center h5{
+	display:inline-block;
+	height:30px
+	margin: 5px auto auto 7px;
+	padding: 0 0 0 20px;
+}
+/*#navbarDropdown::before {
+    background: #ccc none repeat scroll 0 0;
+    content: " ";
+    display: inline-block;
+    height: 24px;
+    margin: 0 5px;
+    position: relative;
+    width: 1px;
+}*/
+/*.navbar-center h5:first-child::after {
+    display:none;
+}*/
+
+
+.home-button{
+	/*position: absolute;*/
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: arial,helvetica,sans-serif;
+    border:none;
+    /*text-transform: none;*/
+    /*padding:0;	*/
+}
+
+/*.share-group{
+	position: absolute;
+	right:7px;
+	top:15px;
+}*/
+
+
+.share-button{
+/*	position: relative;
+	right:7px;
+	top:10px;*/
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: arial,helvetica,sans-serif;
+    border:none;
+    text-transform: none;	
+}
+
+#shareBtn {
+	color: #3b5998;
+	padding: 3px 20px;
+	cursor:pointer;	
+}
+
+#shareBtn:hover {
+	
+}
+#twitter a{
+	color:#00aced;
+}
+#linkedin a{
+	color:#006fa6;
+}
+.button-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.graphic-containter{
+	/*height:500px;*/
+}
+
+#map{
+	float:right;
+	top:10px;
+}
+.map-container{
+	border: 1px solid #e6e6e6;
+	padding:0;
+}
+
+.sidebar-search{
+	/*padding-bottom:20px;*/
+	/*padding-right: 40px;*/
+}
+.sidebar-search label{
+	/*display:table-row;*/
+}
+.input-group-btn{
+	display: block;
+}
+
+@media (max-width: 620px) { 
+	#map{
+		/*top:90px;*/
+	}
+	#clear{
+		font-size: 1rem;
+	}
+	/*.headline{
+		margin-top:200px;
+	}*/
+	.headline-title{
+		font-size:1.5rem;
+		margin:0;
+	}
+	.lead{
+		display:none;
+	}
+/*	.container-fluid{
+		margin-left:2%;
+		margin-right:2%;
+	}*/
+	/*.navbar-center h5:first-child {
+	    display: none;
+	}*/
+/*	.navbar-center h5 img {
+	    margin:0;
+	}*/
+
+	.navbar-center{
+	margin-left: 30px;
+	text-align: left:;
+   }
+   .navbar, .navbar h5{
+   	font-size: .85rem;
+   	padding:0;
+   }
+
+/*	.sidebar{
+		position:fixed;
+		width:100%;
+		bottom: 0px;
+		left: 0;
+		padding:0 8px;
+		background-color: white;
+		overflow-y:scroll;
+         overflow-x:hidden;         
+	}*/
+
+	.sidebar-search{display:none;}
+	
+	#precinct-results{
+		-webkit-transition: all .3s ease .15s;
+		-moz-transition: all .3s ease .15s;
+		-o-transition: all .3s ease .15s;
+		-ms-transition: all .3s ease .15s;
+		transition: all .3s ease .15s;
+	}
+	.election-navigation{
+		margin-left:-50px;
+	}
+}
+@media (max-width: 800px){
+	.h5, h5{
+		font-size: 1rem;
+	}
+
+
+	#map{
+
+		float:none;
+	}
+
+	#legend{
+		display:none;
+	}
+
+	.prefix{
+		/*margin: 0 5%;*/
+	}
+}
+
+#precinct-results{
+	font-size: 0.85rem;
+}
+
+#precinct-results th, #precinct-results td{
+	padding:2px;
+}
+.winner-DFL{
+	color:steelblue;
+}
+.winner-R{
+	color:brown;
+}
+
+.tdimage{
+	width:40px;
+}
+.fa-check{
+	color:green;
+}
+
+#candidate-table th{
+	text-transform: uppercase;
+	font-size: .75rem;
+	color: #aaa;
+	font-weight: 500;
+	/*width:33%;*/
+	padding-left: 2px;
+	}
+#candidate-table tr{
+	font-size: .9rem;
+}
+
+#candidate-table td{
+	font-size: .85rem;
+	padding: 5px 0;
+}
+
+
+
+#candidate-table img{
+	max-height: 30px;
+	float:left;
+	margin-top:4px;
+	margin-right: 5px;
+	border-radius: 3px;
+}
