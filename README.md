@@ -1,1 +1,0 @@
-# MapboxGL-Election2018
