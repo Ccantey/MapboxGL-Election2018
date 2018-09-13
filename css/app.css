@@ -67,11 +67,11 @@ nav h5, .nav-link{
 }
 
 
-#legend, #legend{
+#legend{
 	position: absolute;
 	display: inline-flex;
-	right:50px;
-	top:20px;
+	right:70px;
+	top:12px;
 	border-radius: 3px;
 	background-color: #fff;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.10);
@@ -261,10 +261,10 @@ ul.election-navigation li{
 	/*height:500px;*/
 }
 
-#map{
+/*#map{
 	float:right;
 	top:10px;
-}
+}*/
 .map-container{
 	border: 1px solid #e6e6e6;
 	padding:0;
@@ -282,9 +282,7 @@ ul.election-navigation li{
 }
 
 @media (max-width: 620px) { 
-	#map{
-		/*top:90px;*/
-	}
+
 	#clear{
 		font-size: 1rem;
 	}
@@ -330,7 +328,7 @@ ul.election-navigation li{
 	}*/
 
 	.sidebar-search{display:none;}
-	
+
 	#precinct-results{
 		-webkit-transition: all .3s ease .15s;
 		-moz-transition: all .3s ease .15s;
@@ -345,12 +343,6 @@ ul.election-navigation li{
 @media (max-width: 800px){
 	.h5, h5{
 		font-size: 1rem;
-	}
-
-
-	#map{
-
-		float:none;
 	}
 
 	#legend{
